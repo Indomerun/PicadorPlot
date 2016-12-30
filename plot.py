@@ -33,7 +33,6 @@ tc.make_alphablended_cmap("RdPu", "RdPu_rgb")
 saveFigures = True
 
 
-#frame = 35
 # --- Plot --- #
 def Plot(axesSettings, plotSettings, outputFolder='./', i=None):
     for settings in axesSettings + plotSettings:
@@ -49,7 +48,7 @@ def Plot(axesSettings, plotSettings, outputFolder='./', i=None):
             setAxes(axes, axesSettings)
 
             fig = plt.gcf()
-            #fig.set_tight_layout(True)
+            fig.set_tight_layout(True)
             fig.canvas.draw()
             if saveFigures:
                 fig.savefig(outputFolder + str(i) + '.png', dpi=300)
@@ -64,7 +63,7 @@ def Plot(axesSettings, plotSettings, outputFolder='./', i=None):
         #axes['XY'].set_axis_off()
 
         fig = plt.gcf()
-        #fig.set_tight_layout(True)
+        fig.set_tight_layout(True)
         #plt.tight_layout(pad=0.4, w_pad=0.05, h_pad=1.0)
         plt.subplots_adjust(left=0.08, bottom=0.1, right=0.92, top=0.9, wspace=0.35, hspace=0.35)
         fig.canvas.draw()
